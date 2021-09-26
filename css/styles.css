@@ -7,7 +7,7 @@
 
 html {
     font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Mulish', sans-serif;
 }
 
 body {
@@ -123,6 +123,7 @@ body {
 
 .carousel-item {
     display: inline-block;
+    position: relative;
     width: 200px;
     height: 250px;
     margin-right: 10px;
@@ -150,4 +151,27 @@ body {
 .carousel-item__img {
     width: 200px;
     height: 250px;
+    object-fit: cover;
+}
+
+.carousel-item__detail{
+    position: absolute;
+    padding: 10px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 100%);
+    font-size: 1.0rem;
+    opacity: 0;
+    transition: 450ms opacity;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.carousel-item__detail:hover {
+    opacity: 1;
+}
+
+.carousel-item__detail img {
+    width: 20px;
+    height: 20px;
 }
